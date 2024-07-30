@@ -1,0 +1,24 @@
+-- Create the database
+CREATE DATABASE bankingsystem;
+
+-- Use the created database
+USE bankingsystem;
+
+
+-- Create the accounts table
+   CREATE TABLE accounts (
+       account_number BIGINT NOT NULL ,
+       full_name VARCHAR(255) NOT NULL,
+       email VARCHAR(255) NOT NULL UNIQUE,
+       balance DECIMAL(10,2) NOT NULL,
+       security_pin CHAR(4) NOT NULL,
+       PRIMARY KEY (account_number)
+   );
+
+-- Create the user table
+	CREATE TABLE user (
+        full_name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        PRIMARY KEY (email)
+   );
